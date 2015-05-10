@@ -16,7 +16,7 @@ function hasify(obj) {
 
         do {
             node = path.shift();
-            if (working[node] !== undefined) {
+            if (node in working) {
                 working = working[node];
                 continue;
             } else {
