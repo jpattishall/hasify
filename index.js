@@ -2,11 +2,16 @@
  * Extend passed object with `has` method. Ex: obj.has('child.property');
  * Returns true if "obj.child.property" exists, and not undefined
  * @param {object} obj
+ * @param {string} str
  * @return {boolean}
  */
-function hasify(obj) {
+function hasify(obj, str) {
 
     var obj = obj === undefined ? {} : obj;
+
+    if (str) {
+        return has.call(obj, str);
+    }
 
     function has(path) {
         var path = path.split('.'),
