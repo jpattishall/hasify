@@ -1,4 +1,4 @@
-#hasify
+# hasify
 
 ## Overview
 
@@ -20,7 +20,7 @@ In addition, you can use `hasify` as a standalone utility function.
         // do stuff!
     }
 
-##Usage
+## Usage
 
 As a standalone function, hasify allows you to pass an object and string to determine if the object has nested children.
 
@@ -60,7 +60,7 @@ Finally, `hasify` also allows object instantiation with a helper `has` method.
         // Do stuff...
     }
 
-##Installation
+## Installation
 
 `hasify` can easily be installed via npm.
 
