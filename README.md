@@ -53,10 +53,10 @@ If preferred, `hasify` can extend an object with a `has` method, as shown below:
 
 Finally, `hasify` also allows object instantiation with a helper `has` method.
 
-    var newStateObject = hasify();
-    newStateObject = syncLogUserIn(token);
+    var token = hasify();
+    token.user = syncLogUserIn(userAuthObj);
 
-    if (newStateObject.has('user.isLoggedIn')) {
+    if (token.has('user.isLoggedIn')) {
         // Do stuff...
     }
 
