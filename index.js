@@ -7,17 +7,18 @@
  */
 function hasify(obj, str) {
 
-    var obj = obj === undefined ? {} : obj;
+    obj = obj === undefined ? {} : obj;
 
     if (str) {
         return has.call(obj, str);
     }
 
     function has(path) {
-        var path = path.split('.'),
-            node,
-            working = this,
-            isValid = true;
+        var working = this,
+            isValid = true,
+            node;
+
+        path = path.split('.');
 
         do {
             node = path.shift();
